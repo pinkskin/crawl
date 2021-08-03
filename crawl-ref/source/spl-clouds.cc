@@ -29,6 +29,42 @@
 #include "target.h"
 #include "terrain.h"
 
+spret sea_of_fire()
+{
+    int created = 0;
+    bool unknown_unseen = false;
+    for (radius_iterator ri(you.pos(), LOS_NO_TRANS); ri; ++ri)
+    {
+        if (cell_is_solid(*ri) || cloud_at(*ri))
+            continue;
+        const actor* act = actor_at(*ri);
+        if (act)
+        {
+            unknown_unseen = unknown_unseen || !you.can_see(*act);
+            continue;
+        }
+        place_cloud(CLOUD_EMBERS, *ri, 1, &you);
+        // Create a cloud for the time it takes to create, so that no matter what,
+        // the flame tries to ignite before the next player action. (This is very
+        // slightly faster than conjure flame.)
+        cloud_at(*ri)->decay = player_speed();
+        ++created;
+    }
+    if (created > 0)
+    {
+        mprf("%s to smoulder around you!",
+             created == 1 ? "Fire begins" : "Fires begin");
+        return spret::success;
+    }
+    if (!unknown_unseen)
+    {
+        mpr("There's no open space to ignite fires in.");
+        return spret::abort;
+    }
+    canned_msg(MSG_NOTHING_HAPPENS);
+    return spret::fail;
+}
+
 spret conjure_flame(int pow, bool fail)
 {
     cloud_struct* cloud = cloud_at(you.pos());
