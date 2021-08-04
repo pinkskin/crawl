@@ -2013,10 +2013,50 @@ static bool _wu_jian_retribution()
     return true;
 }
 
+// XXX: this should be in a db
+static string _ignis_elemental_message()
+{
+    return random_choose(
+        " says: my hands, my teeth, my burning tears: these will never betray me!",
+        " says: attack, my last stalwart servants!",
+        " wails with rage, and rains down burning fury!",
+        " calls forth spirits of fire to unmake you!",
+        " says: burn! Burn until nothing is left!",
+        " says: these will know how to inflict the punishment due to you!",
+        " says: with a thousand fires I burned cities, but these will suffice for you!",
+        " cries: Betrayer! Apostate! Perish!");
+}
+
+static void _summon_ignis_elementals()
+{
+    const god_type god = GOD_IGNIS;
+    const int how_many = random_range(2, 4);
+    bool success = false;
+    for (int i = 0; i < how_many; i++)
+        if (create_monster(_wrath_mon_data(MONS_FIRE_ELEMENTAL, god), false))
+            success = true;
+
+    if (success)
+        simple_god_message(_ignis_elemental_message().c_str(), god);
+    else
+        simple_god_message("' divine wrath fails to arrive.", god);
+}
+
 static bool _ignis_retribution()
 {
-    // TODO
-    simple_god_message(" weeps fiery tears at your betrayal.");
+    const god_type god = GOD_IGNIS;
+    switch (random2(4))
+    {
+    case 0:
+        simple_god_message(" weeps fiery tears at your betrayal.", god);
+        break;
+    case 1:
+        simple_god_message(" rages and curses at your abandonment.", god);
+        break;
+    case 2:
+        _summon_ignis_elementals();
+        break;
+    }
     return true;
 }
 
