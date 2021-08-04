@@ -52,6 +52,7 @@
 #include "stringutil.h"
 #include "tag-version.h"
 #include "terrain.h"
+#include "traps.h" // is_valid_shaft_level
 #include "transform.h"
 #include "view.h"
 #include "xom.h"
@@ -2042,6 +2043,15 @@ static void _summon_ignis_elementals()
         simple_god_message("' divine wrath fails to arrive.", god);
 }
 
+static void _ignis_shaft()
+{
+    if (you.shaftable())
+    {
+        simple_god_message(" burns the ground from beneath your feet!", GOD_IGNIS);
+        you.do_shaft();
+    }
+}
+
 static bool _ignis_retribution()
 {
     const god_type god = GOD_IGNIS;
@@ -2051,7 +2061,7 @@ static bool _ignis_retribution()
         simple_god_message(" weeps fiery tears at your betrayal.", god);
         break;
     case 1:
-        simple_god_message(" rages and curses at your abandonment.", god);
+        _ignis_shaft();
         break;
     case 2:
         _summon_ignis_elementals();
