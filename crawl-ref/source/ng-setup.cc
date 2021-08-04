@@ -332,7 +332,11 @@ void give_items_skills(const newgame_def& ng)
     else if (job_gets_ranged_weapons(you.char_class))
         _give_ranged_weapon(ng.weapon, you.char_class == JOB_HUNTER ? 1 : 0);
     else if (job_has_weapon_choice(you.char_class))
-        newgame_make_item(OBJ_WEAPONS, ng.weapon);
+    {
+        const int plus = you.char_class == JOB_ACOLYTE_OF_FLAME ? -1 : 0;
+        const brand_type brand = you.char_class == JOB_ACOLYTE_OF_FLAME ? SPWPN_FLAMING : SPWPN_NORMAL;
+        newgame_make_item(OBJ_WEAPONS, ng.weapon, 1, plus, brand);
+    }
 
     give_job_equipment(you.char_class);
     give_job_skills(you.char_class);

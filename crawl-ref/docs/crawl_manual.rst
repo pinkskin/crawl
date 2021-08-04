@@ -2040,6 +2040,12 @@ Abyssal Knights
   corruption and chaos, starting with a simple weapon of their choice and
   leather armour.
 
+Acolytes of Flame
+  Acolytes of Flame serve Ignis, the Dying Flame, who grants them incredible
+  power over fire... but there is only so much fire left to draw on, and once
+  it burns out, acolytes may need to abandon Ignis. Acolytes start with a robe,
+  a choice of flaming weapons, and the spell Foxfire.
+
 Chaos Knights
   The Chaos Knight is a plaything of Xom, subject to the god's constantly
   changing moods. Xom is a very unpredictable (and possibly psychotic) entity

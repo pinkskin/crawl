@@ -48,6 +48,17 @@ static const map<job_type, job_def> job_data =
       { SK_INVOCATIONS, 2 }, { SK_WEAPON, 2 }, },
 } },
 
+{ JOB_ACOLYTE_OF_FLAME, {
+    "AF", "Acolyte of Flame",
+    6, 6, 0,
+    { SP_HILL_ORC, SP_BASE_DRACONIAN, SP_OGRE, SP_DJINNI, SP_GNOLL },
+    { SPELL_FOXFIRE },
+    { "robe" },
+    WCHOICE_PLAIN,
+    { { SK_FIGHTING, 3 }, { SK_DODGING, 1 },
+      { SK_WEAPON, 2 }, { SK_FIRE_MAGIC, 2 } },
+} },
+
 { JOB_AIR_ELEMENTALIST, {
     "AE", "Air Elementalist",
     0, 7, 5,
