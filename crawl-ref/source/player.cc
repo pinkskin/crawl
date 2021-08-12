@@ -5931,6 +5931,9 @@ int player::corrosion_amount() const
     if (duration[DUR_CORROSION])
         corrosion += you.props[CORROSION_KEY].get_int();
 
+    if (player_in_branch(BRANCH_DIS))
+        corrosion += 2;
+
     return corrosion;
 }
 
