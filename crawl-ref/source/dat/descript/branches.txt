@@ -118,7 +118,8 @@ cold congeals potions.
 Tartarus
 
 Tartarus is a decaying netherworld. Over time, the undead, demons and devils of
-this place drain the life from any who dare to enter.
+this place drain the life from any who dare to enter and the rot of the place
+halves their rate of regeneration.
 %%%%
 Zot
 

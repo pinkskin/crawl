@@ -724,6 +724,16 @@ bool fill_status_info(int status, status_info& inf)
         }
         break;
 
+    case STATUS_HALF_REGEN:
+        if (player_in_branch(BRANCH_TARTARUS))
+        {
+            inf.light_colour = RED;
+            inf.light_text = "Regen/2";
+            inf.short_text = "half regeneration";
+            inf.long_text = "Your regeneration and magic regeneration rates are halved.";
+        }
+        break;
+
     default:
         if (!found)
         {

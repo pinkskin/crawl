@@ -1179,6 +1179,9 @@ int player_regen()
     if (you.duration[DUR_TROGS_HAND])
         rr += REGEN_PIP;
 
+    if (player_in_branch(BRANCH_TARTARUS))
+        rr /= 2;
+
     return rr;
 }
 
@@ -1194,6 +1197,9 @@ int player_mp_regen()
 
     if (you.props[MANA_REGEN_AMULET_ACTIVE].get_int() == 1)
         regen_amount += 25;
+
+    if (player_in_branch(BRANCH_TARTARUS))
+        regen_amount /= 2;
 
     return regen_amount;
 }
