@@ -775,8 +775,10 @@ string ignore_faith_reason()
         return " already offers you all the fire that remains!";
     case GOD_RU:
         if (you.piety >= piety_breakpoint(5))
+        {
             return " says: An ascetic of your devotion"
                    " has no use for such trinkets.";
+        }
         break;
     default:
         break;
