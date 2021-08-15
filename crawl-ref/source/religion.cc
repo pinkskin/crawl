@@ -769,7 +769,7 @@ string ignore_faith_reason()
     case GOD_GOZAG:
         return " cares for nothing but gold!";
     case GOD_ASHENZARI:
-        return " cares nothing for such trivial demonstrations of your faith";
+        return " cares nothing for such trivial demonstrations of your faith.";
     case GOD_IGNIS:
         // XXX: would it be better to offer a discount..?
         return " already offers you all the fire that remains!";
