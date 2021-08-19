@@ -47,6 +47,7 @@ enum monster_type                      // env.mons[].type
     MONS_PORCUPINE,
 #endif
 #if TAG_MAJOR_VERSION > 34
+    MONS_CRYSTAL_ECHIDNA,
     MONS_PALENTONGA,
 #endif
     MONS_JACKAL,
@@ -1125,6 +1126,7 @@ enum monster_type                      // env.mons[].type
     MONS_CREEPING_INFERNO,
     MONS_SEARING_WRETCH,
     MONS_QUICKSILVER_ELEMENTAL,
+    MONS_CRYSTAL_ECHIDNA,
 #endif
 
     NUM_MONSTERS,               // used for polymorph

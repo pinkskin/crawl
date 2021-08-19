@@ -620,6 +620,7 @@ POP_DEPTHS,
   {  1,  7,  300, PEAK, MONS_IRON_GOLEM },
   {  1,  7,  200, PEAK, MONS_CAUSTIC_SHRIKE },
   {  1,  7,  300, PEAK, MONS_QUICKSILVER_ELEMENTAL },
+  {  1,  7,  300, PEAK, MONS_CRYSTAL_ECHIDNA },
   // "top tier" signature threats
   {  1,  7,  400, RISE, MONS_IRON_GIANT },
   {  1,  7,  200, RISE, MONS_HELL_SENTINEL },
