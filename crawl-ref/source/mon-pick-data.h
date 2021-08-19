@@ -618,7 +618,8 @@ POP_DEPTHS,
   {  1,  7,   10, FLAT, MONS_DREAD_LICH },
   // "branch flavour" threats
   {  1,  7,  300, PEAK, MONS_IRON_GOLEM },
-  {  1,  7,  300, PEAK, MONS_CAUSTIC_SHRIKE },
+  {  1,  7,  200, PEAK, MONS_CAUSTIC_SHRIKE },
+  {  1,  7,  300, PEAK, MONS_QUICKSILVER_ELEMENTAL },
   // "top tier" signature threats
   {  1,  7,  400, RISE, MONS_IRON_GIANT },
   {  1,  7,  200, RISE, MONS_HELL_SENTINEL },

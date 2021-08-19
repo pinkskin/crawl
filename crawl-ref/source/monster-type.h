@@ -317,6 +317,7 @@ enum monster_type                      // env.mons[].type
     MONS_AIR_ELEMENTAL,
 #if TAG_MAJOR_VERSION > 34
     MONS_IRON_ELEMENTAL,
+    MONS_QUICKSILVER_ELEMENTAL,
     MONS_ELEMENTAL_WELLSPRING,
 #endif
     MONS_TWISTER,        // air miscasts
@@ -1123,6 +1124,7 @@ enum monster_type                      // env.mons[].type
     MONS_MLIOGLOTL,
     MONS_CREEPING_INFERNO,
     MONS_SEARING_WRETCH,
+    MONS_QUICKSILVER_ELEMENTAL,
 #endif
 
     NUM_MONSTERS,               // used for polymorph
