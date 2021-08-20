@@ -321,6 +321,11 @@ void give_items_skills(const newgame_def& ng)
 
         break;
 
+    case JOB_ACOLYTE_OF_FLAME:
+        you.religion = GOD_IGNIS;
+        you.piety = 150;
+        break;
+
     default:
         break;
     }
