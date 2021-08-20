@@ -45,9 +45,8 @@ spret sea_of_fire()
         }
         place_cloud(CLOUD_EMBERS, *ri, 1, &you);
         // Create a cloud for the time it takes to create, so that no matter what,
-        // the flame tries to ignite before the next player action. (This is very
-        // slightly faster than conjure flame.)
-        cloud_at(*ri)->decay = player_speed();
+        // the flame tries to ignite just after the next player action.
+        cloud_at(*ri)->decay = player_speed() + 1;
         ++created;
     }
     if (created > 0)
