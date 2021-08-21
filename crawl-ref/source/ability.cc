@@ -1383,6 +1383,23 @@ static bool _can_blinkbolt(bool quiet)
     return true;
 }
 
+static bool _can_rising_flame(bool quiet)
+{
+    if (you.duration[DUR_RISING_FLAME])
+    {
+        if (!quiet)
+            mpr("You're already rising!");
+        return false;
+    }
+    if (!level_above().is_valid())
+    {
+        if (!quiet)
+            mpr("You can't rise from this level!");
+        return false;
+    }
+    return true;
+}
+
 // Check prerequisites for a number of abilities.
 // Abort any attempt if these cannot be met, without losing the turn.
 // TODO: Many more cases need to be added!
@@ -1757,6 +1774,9 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
         }
         return true;
     }
+
+    case ABIL_IGNIS_RISING_FLAME:
+        return _can_rising_flame(quiet);
 
     default:
         return true;
@@ -3152,16 +3172,8 @@ static spret _do_ability(const ability_def& abil, bool fail, dist *target)
         return sea_of_fire();
 
     case ABIL_IGNIS_RISING_FLAME:
-        if (you.duration[DUR_RISING_FLAME])
-        {
-            mpr("You're already rising!");
+        if (!_can_rising_flame(false))
             return spret::abort;
-        }
-        if (!level_above().is_valid())
-        {
-            mpr("You can't rise from this level!");
-            return spret::abort;
-        }
         mpr("You begin to rise into the air.");
         // slightly faster than teleport
         you.set_duration(DUR_RISING_FLAME, 2 + random2(3));
