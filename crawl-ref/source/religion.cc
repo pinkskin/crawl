@@ -2963,9 +2963,10 @@ int initial_wrath_penance_for(god_type god)
         case GOD_QAZLAL:
         case GOD_VEHUMET:
         case GOD_ZIN:
-        case GOD_IGNIS:
         default:
             return 25;
+        case GOD_IGNIS:
+            return 15; // baby wrath!
         case GOD_RU:
             return 0;
     }
