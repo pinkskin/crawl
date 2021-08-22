@@ -241,7 +241,7 @@ static const char *divine_title[][8] =
         "Young Dragon",     "Red Sash",               "Golden Sash",              "Sifu"},
 
     // Ignis -- fire/candles theme
-    {"Extinguished",          "Kindling",             "Glowing Coal",              "Votive Light",
+    {"Extinguished",          "Last Ember",             "Glowing Coal",              "Votive Light",
         "Hearthfire",     "Furnace",               "Raging Flame",              "Inferno"},
 };
 COMPILE_CHECK(ARRAYSZ(divine_title) == NUM_GODS);
