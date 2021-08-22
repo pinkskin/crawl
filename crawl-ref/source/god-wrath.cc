@@ -2124,7 +2124,6 @@ static bool _ignis_champion()
 
 static bool _ignis_retribution()
 {
-    _ignis_champion(); // XXX DEBUG
     if (one_chance_in(3) && _ignis_shaft())
         return true;
     if (coinflip() && _ignis_champion())
