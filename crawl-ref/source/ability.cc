@@ -637,7 +637,7 @@ static vector<ability_def> &_get_ability_list()
             0, 0, 8, /*avg 12 uses from 150 to <30 piety*/
             {fail_basis::invo}, abflag::quiet_fail },
         { ABIL_IGNIS_FOXFIRE, "Foxfire Swarm",
-            0, 0, 16, {fail_basis::invo}, abflag::quiet_fail },
+            0, 0, 12, {fail_basis::invo}, abflag::quiet_fail },
         { ABIL_IGNIS_RISING_FLAME, "Rising Flame",
             0, 0, 32, {fail_basis::invo}, abflag::none },
 
