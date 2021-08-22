@@ -53,7 +53,7 @@ mutations:
   26:
     MUT_NECRO_ENHANCER: 1
 recommended_jobs:
-  - JOB_ACOLYTE_OF_FLAME
+  - JOB_CINDER_ACOLYTE
   - JOB_WIZARD
   - JOB_CONJURER
   - JOB_NECROMANCER

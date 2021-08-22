@@ -4,11 +4,6 @@ Abyssal Knight
 Abyssal Knights worship Lugonu, and are sent from the Abyss into the Dungeon to
 spread corruption and chaos.
 %%%%
-Acolyte of Flame
-
-Acolytes of Flame worship Ignis, drawing upon the flame of a dying god until
-there is nothing left.
-%%%%
 Air Elementalist
 
 Air Elementalists have learned the Shock spell. Later on, their selection of
@@ -37,6 +32,11 @@ Chaos Knight
 
 Chaos Knights are playthings of the unpredictable Xom, and are subject to the
 god's constantly changing moods.
+%%%%
+Cinder Acolyte
+
+Cinder Acolytes worship Ignis, drawing upon the flame of a dying god until
+there is nothing left.
 %%%%
 Conjurer
 

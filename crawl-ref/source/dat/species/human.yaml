@@ -17,7 +17,7 @@ dex: 8
 levelup_stat_frequency: 4
 recommended_jobs:
   - JOB_BERSERKER
-  - JOB_ACOLYTE_OF_FLAME
+  - JOB_CINDER_ACOLYTE
   - JOB_CONJURER
   - JOB_NECROMANCER
   - JOB_ICE_ELEMENTALIST
