@@ -690,6 +690,7 @@ POP_DEPTHS,
   {  1,  7,  100, PEAK, MONS_PROFANE_SERVITOR },
   {  1,  7,   30, FLAT, MONS_SILENT_SPECTRE },
   // "top tier" signature threats
+  {  1,  7,  400, RISE, MONS_TAINTED_LEVIATHAN },
   {  1,  7,  200, RISE, MONS_TZITZIMITL },
 },
 
