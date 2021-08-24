@@ -638,10 +638,11 @@ POP_DEPTHS,
   {  1,  7,   10, FLAT, MONS_DREAD_LICH },
   // "branch flavour" threats
   {  1,  7,  300, PEAK, MONS_BALRUG },
-  {  1,  7,  300, PEAK, MONS_HELLEPHANT },
+  {  1,  7,  300, PEAK, MONS_SEARING_WRETCH },
+  {  1,  7,   50, FLAT, MONS_STOKER },
   {  1,  7,   30, FLAT, MONS_CREEPING_INFERNO },
   // "top tier" signature threats
-  {  3,  7,  400, RISE, MONS_SEARING_WRETCH },
+  {  1,  7,  300, PEAK, MONS_HELLEPHANT },
   {  3,  7,  200, RISE, MONS_BRIMSTONE_FIEND },
 },
 
@@ -1190,7 +1191,8 @@ COMPILE_CHECK(ARRAYSZ(population_water) == NUM_BRANCHES);
 
 #define HELL_LAVA_POP {\
   {  1,  7,   300, FALL, MONS_FIRE_VORTEX },\
-  {  1,  7,     5, FLAT, MONS_CREEPING_INFERNO },\
+  {  1,  7,    50, RISE, MONS_STOKER },\
+  {  1,  7,    50, FLAT, MONS_CREEPING_INFERNO },\
   {  1,  7,   100, FLAT, MONS_NO_MONSTER },\
 }
 
