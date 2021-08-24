@@ -1179,9 +1179,6 @@ int player_regen()
     if (you.duration[DUR_TROGS_HAND])
         rr += REGEN_PIP;
 
-    if (player_in_branch(BRANCH_TARTARUS))
-        rr /= 2;
-
     return rr;
 }
 
@@ -1197,9 +1194,6 @@ int player_mp_regen()
 
     if (you.props[MANA_REGEN_AMULET_ACTIVE].get_int() == 1)
         regen_amount += 25;
-
-    if (player_in_branch(BRANCH_TARTARUS))
-        regen_amount /= 2;
 
     return regen_amount;
 }
@@ -6272,9 +6266,12 @@ int player_willpower(bool calc_unid, bool temp)
     if (you.duration[DUR_TROGS_HAND] && temp)
         rm += WL_PIP * 2;
 
-    // Enchantment effect
-    if (you.duration[DUR_LOWERED_WL] && temp)
+    // Enchantment/environment effect
+    if ((you.duration[DUR_LOWERED_WL]
+         || player_in_branch(BRANCH_TARTARUS)) && temp)
+    {
         rm /= 2;
+    }
 
     if (rm < 0)
         rm = 0;

@@ -724,14 +724,12 @@ bool fill_status_info(int status, status_info& inf)
         }
         break;
 
-    case STATUS_HALF_REGEN:
+    case STATUS_LOWERED_WL:
+        // Don't double the light if under a duration
+        if (!player_in_branch(BRANCH_TARTARUS) || you.duration[DUR_LOWERED_WL])
+            break;
         if (player_in_branch(BRANCH_TARTARUS))
-        {
-            inf.light_colour = RED;
-            inf.light_text = "Regen/2";
-            inf.short_text = "half regeneration";
-            inf.long_text = "Your regeneration and magic regeneration rates are halved.";
-        }
+            _fill_inf_from_ddef(DUR_LOWERED_WL, inf);
         break;
 
     default:
