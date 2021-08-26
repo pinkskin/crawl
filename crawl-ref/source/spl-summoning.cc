@@ -139,7 +139,9 @@ spret cast_summon_cactus(int pow, god_type god, bool fail)
 
     fail_check();
 
-    if (!create_monster(_pal_data(MONS_BAT /*TODO*/, 3, god, SPELL_SUMMON_CACTUS)))
+    mgen_data mg = _pal_data(MONS_CACTUS_GIANT, 3, god, SPELL_SUMMON_CACTUS);
+    mg.hp = hit_points(pow + 20, 1);
+    if (!create_monster(mg))
         canned_msg(MSG_NOTHING_HAPPENS);
 
     return spret::success;
