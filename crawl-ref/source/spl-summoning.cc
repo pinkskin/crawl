@@ -132,6 +132,19 @@ spret cast_call_canine_familiar(int pow, god_type god, bool fail)
     return spret::success;
 }
 
+spret cast_summon_cactus(int pow, god_type god, bool fail)
+{
+    if (rude_stop_summoning_prompt())
+        return spret::abort;
+
+    fail_check();
+
+    if (!create_monster(_pal_data(MONS_BAT /*TODO*/, 3, god, SPELL_SUMMON_CACTUS)))
+        canned_msg(MSG_NOTHING_HAPPENS);
+
+    return spret::success;
+}
+
 spret cast_summon_armour_spirit(int pow, god_type god, bool fail)
 {
     if (rude_stop_summoning_prompt())
@@ -2618,6 +2631,7 @@ static const map<spell_type, summon_cap> summonsdata =
     { SPELL_SUMMON_GUARDIAN_GOLEM,    { 1, 1 } },
     { SPELL_SPELLFORGED_SERVITOR,     { 1, 1 } },
     { SPELL_ANIMATE_ARMOUR,           { 1, 1 } },
+    { SPELL_SUMMON_CACTUS,            { 1, 1 } },
     // Monster-only spells
     { SPELL_SHADOW_CREATURES,         { 0, 4 } },
     { SPELL_SUMMON_UFETUBUS,          { 0, 8 } },
